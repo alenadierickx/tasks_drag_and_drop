@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-size: .9rem;
+}
+
+body {
+    background: #9bcbe3;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15vh;
+}
+
+.col {
+    width: 40%;
+    position: relative;
+    height: 70vh;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.col.start {
+    background: #ec114f;
+}
+
+.col.done {
+    background: #08022d;
+}
+
+.col-header {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    width: 100%;
+    padding: 2rem;
+}
+
+.col-header.start,
+.placeholder.done {
+    background: #08022d;
+}
+
+.col-header.done,
+.placeholder.start {
+    background: #ec114f;
+}
+
+.placeholder {
+    height: 50vh;
+    padding: 1.4rem 10%;
+    overflow-y: scroll;
+    border: none;
+    transition: border .5s ease-in-out;
+}
+
+.placeholder.hovered {
+    border-top: #ffffff .5rem solid;
+    transition: border .5s ease-in-out;
+}
+
+.item {
+    padding: .7rem;
+    border-radius: .5rem;
+    cursor: grab;
+    border: 1px solid #ffffff;
+    margin-bottom: .5rem;
+}
+
+.item.hold {
+    border: none;
+}
+
+.item.hide {
+    display: none;
+}
+
+.start .item {
+
+
+}
+
+.done .item {}
+
+.add-task {
+    position: absolute;
+    bottom: 1rem;
+    right: 10%;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.add-task input {
+    outline: none;
+    width: 70%;
+    background: transparent;
+    border: none;
+    border-bottom: .15rem solid #08022d;
+}
+
+.add-task input::placeholder {
+    font-size: 1.1rem;
+    color: #ffffff;
+    opacity: .5;
+}
+
+.add-task button {
+    border: .15rem solid #08022d;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    color: #ec114f;
+    font-weight: normal;
+    background: #08022d;
+    cursor: pointer;
+    outline: none;
+}
+
+.add-task button:hover {
+    color: #08022d;
+    border: .15rem solid #08022d;
+    background: #ec114f;
+    transition: all .8s ease-in-out;
+}
+
+
